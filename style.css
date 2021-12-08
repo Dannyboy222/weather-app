@@ -5,17 +5,18 @@ body {
 	align-items: center;
 	margin: 0;
 	background-color: gray;
+	color: white;
 	font-family: 'Readex Pro', sans-serif;
 	background-image: url('http://source.unsplash.com/1600x900/?landscape');
 }
 
 .card {
-	background-color: honeydew;
+	opacity: 80%;
+	background-color: black;
 	padding: 2em;
 	border-radius: 30px;
 	width: 100%;
 	max-width: 420px;
-	margin: 1em;
 }
 
 .search {
@@ -23,16 +24,36 @@ body {
 	align-items: center;
 	justify-content: center;
 }
+.description {
+	text-transform: capitalize;
+}
 
 button {
 	margin: 0.5em;
 	width: 2.6em;
 	height: 2.6em;
 	cursor: pointer;
+	border-radius: 30px;
 }
 
 input {
 	padding: 0.5em;
 	border-radius: 18px;
 	font-size: 120%;
+}
+
+.weather.loading {
+	visibility: hidden;
+	max-height: 20px;
+	position: relative;
+}
+
+.weather.loading:after {
+	visibility: visible;
+	content: 'Loading...';
+	color: black;
+	position: absolute;
+	top: 0;
+	left: 20px;
+	color: white;
 }
